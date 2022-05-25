@@ -97,3 +97,33 @@ bootstrap: [AppComponent]
 })
 
 export class AppModule {}
+
+////////////////////////////////
+
+html form=========
+
+app.component.html
+
+<form #myForm="ngForm" (ngSubmit)="submit(myForm.value)"> <div class="form-group">
+
+<label for="first Name">First Name </label> <input type="text" name="firstName" ((agModel)="firstName">
+
+</div>
+
+<br>
+
+<div class="form-group">
+
+<label for="lastName Last Name </label> <input type="text name="lastName" [[ngModel)]="lastName">
+
+</div>
+
+<br>
+
+<div class="form-group">
+
+<label for="mobileNum">Mobile Number </label> <input type="text" name='mobileNum" (ngModel)]="mobileNum">
+
+</div>
+<br> <br>
+<button type ="submit">Submit</button>
