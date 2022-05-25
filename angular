@@ -1,0 +1,99 @@
+install node.js
+
+npm -v
+
+npm install -g npm
+
+mkdir foldername
+
+cd foldername
+
+npm install -g @angular/cli
+
+ng --version
+
+ng new first-app
+
+cd first-app
+
+ng serve -o   
+
+
+///////
+Step 1: Open app.module.ts and edit the code as N5- import (Component } from @angular/core':
+
+@Component({
+
+selector: 'app-root',
+
+templateUrl: './app.component.html",
+
+styleUrls: [./app.component.css']
+})
+
+export class AppComponent { 
+
+public roll_no:number = 101;
+
+public name:String = 'Anuradha';
+
+public comment:String ="";
+
+}
+/////////////
+Step 2: Open app.component.html file and edit the code as follows
+
+app.component.html
+
+<h1> 2LCOME</h1> 
+
+<h2>Roll_no: {{roll_no}}</h2>
+
+<h2>Name: :{{name}}</h2>
+
+Enter your Comments: <input [(ngModel)]="comment"type ="text">
+
+<hr/>
+
+<p>You have entered... </p>
+
+<h4>{{comment}}</h4>
+/////
+Step 3: Open the app.module.ts and import FormsModule to it. In the following code. bold-faced code indicates the modifications
+
+app.module.ts
+
+import (NgModule} from @angular/core':
+
+import {BrowserModule } from @angular/platform-browser';
+
+import { FormsModule) from '@angular/forms';
+
+import {AppRoutingModule) from './app-routing.module":
+
+import { AppComponent } from './app.component':
+
+@NgModule({
+
+declarations: [
+
+AppComponent
+],
+
+imports: [
+
+BrowserModule,
+
+AppRoutingModule,
+
+FormsMoclule
+
+],
+
+providers: [],
+
+bootstrap: [AppComponent]
+
+})
+
+export class AppModule {}
